@@ -1,4 +1,4 @@
-const URL = 'http://localhost:8000/tenistas';
+const URL = 'proyectofinalweb-production-a37c.up.railway.app';
 
 document.addEventListener('DOMContentLoaded', () => {
   cargarTenistas();
