@@ -1,4 +1,4 @@
-const URL = 'proyectofinalweb-production-a37c.up.railway.app';
+const URL = 'https://proyectofinalweb-production-a37c.up.railway.app/tenistas';
 
 document.addEventListener('DOMContentLoaded', () => {
   cargarTenistas();
