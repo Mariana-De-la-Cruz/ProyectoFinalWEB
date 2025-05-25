@@ -1,0 +1,108 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #e2cbe9;
+  margin: 0;
+  padding: 20px;
+}
+
+.contenedor {
+  max-width: 1100px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+h1 span.title {
+  font-size: 28px;
+}
+
+.formulario, .tabla {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+input {
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #ab57c5;
+}
+
+select {
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+select:focus {
+  border-color: #ab57c5;
+}
+
+.botones {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+#btn {
+  border: none;
+  padding: 12px 18px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  color: black;
+}
+
+.btnVerde {
+  background-color: #28a745;
+}
+
+.btnAmarillo {
+  background-color: #ffc107;
+}
+
+.btnRojo {
+  background-color: #dc3545;
+}
+
+.tabla table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tabla th {
+  background-color: #d536f5;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+.tabla td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
