@@ -4,13 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
   cargarTenistas();
 });
 
-// GET – Obtener todos los tenistas
+//GET
 function cargarTenistas() {
   fetch(URL)
     .then(res => res.json())
     .then(tenistas => {
       const tbody = document.querySelector('#tablaTenistas tbody');
-      tbody.innerHTML = ''; // Limpia la tabla antes de llenarla
+      tbody.innerHTML = ''; 
 
       tenistas.forEach(tenista => {
         const fila = document.createElement('tr');
@@ -34,7 +34,7 @@ function cargarTenistas() {
     });
 }
 
-// POST – Agregar tenista
+//POST
 function agregarTenista() {
   const datos = obtenerDatosFormulario();
   if (!datos) return;
@@ -53,7 +53,7 @@ function agregarTenista() {
     .catch(err => console.error('Error al agregar tenista:', err));
 }
 
-// PATCH – Actualizar tenista
+//PATCH
 function actualizarTenista() {
   const id = document.getElementById('id').value.trim();
   const nombre = document.getElementById('nombre').value.trim();
@@ -69,7 +69,6 @@ function actualizarTenista() {
     return;
   }
 
-  // Construimos el cuerpo con solo los campos que tengan valor
   const datos = {};
   if (nombre) datos.nombre = nombre;
   if (apellido) datos.apellido = apellido;
@@ -100,7 +99,7 @@ function actualizarTenista() {
     });
 }
 
-// DELETE – Eliminar tenista
+//DELETE
 function eliminarTenista() {
   const id = document.getElementById('id').value.trim();
   if (!id || isNaN(id)) {
@@ -138,7 +137,7 @@ function obtenerDatosFormulario() {
   return { nombre, apellido, genero, edad, pais, estatura, ranking };
 }
 
-// Utilidad – Limpiar campos del formulario
+//MÉTODO PARA LIMPIAR FORMULARIO
 function limpiarFormulario() {
   document.getElementById('id').value = '';
   document.getElementById('nombre').value = '';
