@@ -12,9 +12,9 @@ app.use(express.urlencoded({extended: true}));
 //CONEXIÓN A LA BASE DE DATOS
 const mysql = require('mysql2');
     const connection = mysql.createConnection({
-        host: process.env.HOST,
+        host: process.env.HOST || "localhost",
         port: process.env.dbPORT || 3000,
-        user: process.env.USER || "root",
+        user: process.env.USER,
         password: process.env.PASSWORD,
         database: process.env.DATABASE,
     });
